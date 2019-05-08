@@ -1,0 +1,1 @@
+Get-ChildItem C:\Windows\CCM\Logs\*.log | Select-Object name

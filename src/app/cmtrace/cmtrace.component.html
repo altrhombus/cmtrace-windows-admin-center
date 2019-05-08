@@ -1,0 +1,48 @@
+<div class="sme-layout-absolute sme-position-inset-none sme-arrange-stack-v">
+    <section class="sme-position-flex-none">
+        <h2>CMTrace Anywhere</h2>
+    </section>
+    <!-- <section class="sme-position-flex-auto sme-arrange-stage-v">
+        <h4 class="sme-position-flex-none">Logs</h4>
+        <div class="sme-layout-relative sme-position-flex-auto">
+            <sme-data-table #logListTable [items]="logListSource" [(selection)]="selectedData0" selectionMode="single" class="sme-layout-absolute sme-position-inset-none"
+            [defaultSortColumn]="sortByFile" [defaultSortMode]="1">
+                <sme-data-table-column #sortByFile field="name" header="Name" sortable="true"></sme-data-table-column>
+                <sme-data-table-column #sortByFile field="lastModified" header="Last Modified" sortable="true"></sme-data-table-column>
+            </sme-data-table>
+        </div>
+        <div class="sme-position-flex-none">
+            <span class='selected-items-0' *ngIf="selectedData0 && selectedData0.length<2">
+                <span *ngFor="let item of selectedData1"><b>Selected: </b>{{item.name}}</span>
+            </span>
+            <span *ngIf="selectedData0 && selectedData0.length>=2">
+                <em>{{selectedData0.length}} items</em>
+            </span>
+        </div>
+    </section> -->
+    <section class="sme-position-flex-auto sme-arrange-stack-v">
+        <h4 class="sme-position-flex-none">UpdatesHandler.log</h4>
+        <div class="sme-layout-relative sme-position-flex-auto">
+            <sme-data-table #logDataTable [items]="logSource" [(selection)]="selectedData1" selectionMode="single" class="sme-layout-absolute sme-position-inset-none"
+                [defaultSortColumn]="sortByDate" [defaultSortMode]="1">
+                <sme-data-table-column field="entry" header="Log Entry" sortable="true" width="40%"></sme-data-table-column>
+                <sme-data-table-column field="time" header="Time" sortable="true"></sme-data-table-column>
+                <sme-data-table-column #sortByDate field="date" header="Date" sortable="true"></sme-data-table-column>
+                <sme-data-table-column field="component" header="Component" sortable="true"></sme-data-table-column>
+                <sme-data-table-column field="context" header="Context" sortable="true"></sme-data-table-column>
+                <sme-data-table-column field="type" header="Type" sortable="true"></sme-data-table-column>
+                <sme-data-table-column field="thread" header="Thread" sortable="true"></sme-data-table-column>
+                <sme-data-table-column field="file" header="File" sortable="true"></sme-data-table-column>
+            </sme-data-table>
+        </div>
+        <div class="sme-position-flex-none">
+            <span class='selected-items-1' *ngIf="selectedData1 && selectedData1.length<2">
+                <span *ngFor="let item of selectedData1"><b>Entry: </b>{{item.entry}}   <b>Time:</b> {{item.time}}   <b>Date:</b> {{item.date}}   <b>Component:</b> {{item.component}}   <b>Context:</b> {{item.context}}</span>
+            </span>
+            <span *ngIf="selectedData1 && selectedData1.length>=2">
+                <em>{{selectedData1.length}} items</em>
+            </span>
+        </div>
+    </section>
+    <button (click)="updateLayout()">Refresh</button>
+</div>

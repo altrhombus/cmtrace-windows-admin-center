@@ -1,0 +1,13 @@
+{
+    "//": "manifest section",
+    "AltRhombusCMTrace_Manifest_displayName": "CMTrace",
+    "AltRhombusCMTrace_Manifest_description": "{!product-description}",
+    "AltRhombusCMTrace_Manifest_keywords": "SME",
+
+    "//": "CMTrace",
+    "AltRhombusCMTrace_title": "CMTrace",
+
+    "//": "about",
+    "AltRhombusCMTrace_about": "{!product-about}",
+    "AltRhombusCMTrace_aboutDescription": "{!product-about-description}"
+}
